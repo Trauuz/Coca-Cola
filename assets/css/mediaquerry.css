@@ -90,32 +90,107 @@
     }
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .text-box,
-    .image-box {
-        width: 100%;
-    }
-
-    .text-box {
-        position: static;
-    }
+body {
+    overflow-x: hidden;
 }
 
 @media (max-width: 768px) {
     .triplet-wrapper {
         flex-direction: column;
+        align-items: center;
         gap: 20px;
+        padding: 0 10px;
     }
 
     .triplet-box {
         width: 100%;
+        max-width: 100%;
+    }
+
+    .triplet-content {
+        padding: 20px;
+    }
+
+    .triplet-content h3 {
+        font-size: 18px;
+    }
+
+    .triplet-content p {
+        font-size: 14px;
     }
 }
+
+@media (max-width: 768px) {
+    .primary-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+        width: 100%;
+        max-width: 300px;
+        display: inline-block;
+    }
+
+    .brand-overlay-button {
+        padding: 12px 20px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .brand-overlay-button a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .text-box {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .text-box h2 {
+        font-size: 18px;
+    }
+
+    .text-box p {
+        font-size: 14px;
+    }
+
+    .image-box {
+        width: 100%;
+    }
+
+    .image-box img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .links-column {
+        text-align: center;
+    }
+
+    .social-media {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
 
 @keyframes bounce {
     from {

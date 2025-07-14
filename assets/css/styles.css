@@ -651,7 +651,6 @@ footer {
 
 .container {
     position: relative;
-    /* Make the container a positioning context */
     display: flex;
     gap: 40px;
     justify-content: center;
@@ -666,9 +665,7 @@ footer {
     width: 50%;
     max-width: 500px;
     position: absolute;
-    /* Overlap the image */
     z-index: 2;
-    /* Ensure it appears above the image */
 }
 
 .text-box h2 {
@@ -706,11 +703,9 @@ footer {
     color: white;
 }
 
-/* Related Content Section */
 .related-content {
     padding: 40px 0;
     text-align: center;
-    /* Center the section title */
 }
 
 .section-title {
@@ -733,7 +728,6 @@ footer {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     width: calc(33.333% - 40px);
-    /* Adjust for spacing */
     min-height: 200px;
     display: flex;
     flex-direction: column;
@@ -793,24 +787,36 @@ footer {
 .triplet-box img {
     width: 100%;
     aspect-ratio: 4 / 3;
-    /* width : height */
     object-fit: cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 
-/* Purpose Section - Unified Image Size */
 .purpose-section .image-box img {
     width: 100%;
     height: 500px;
-    /* Set a fixed height for all purpose section images */
     object-fit: cover;
-    /* Ensures the image fills the container without stretching */
     border-radius: 15px;
     transition: transform 0.3s ease;
 }
 
-/* Optional: Hover effect for visual enhancement */
+
 .purpose-section .image-box img:hover {
     transform: scale(1.05);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coca-Cola | Homepage</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/mediaquerry.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="loader-logo">
+            <img src="./assets/images/coca-cola red logo.png" alt="Loading Coca-Cola" />
+            <div class="bubbles">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./assets/images/colalogo.png" alt="Coca-Cola Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a class="active_tab" href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="brands.html" class="dropbtn">Brands</a>
+                    <div class="dropdown-content">
+                        <a href="https://www.coca-cola.com/ph/en/brands/coca-cola">Coca-Cola</a>
+                        <a href="https://www.coca-cola.com/ph/en/brands/royal">Royal</a>
+                        <a href="https://www.coca-cola.com/ph/en/brands/sprite">Sprite</a>
+                        <a href="https://www.coca-cola.com/ph/en/brands/wilkins">Wilkins</a>
+                        <a href="https://www.coca-cola.com/ph/en/brands/lemon-dou">Lemon-Dou</a>
+                        <a href="https://www.coca-cola.com/ph/en/brands/minute-maid">Minute Maid</a>
+                        <a href="https://www.coca-cola.com/ph/en/brands/nutriboost">Nutriboost</a>
+                        <a href="https://www.coca-cola.com/ph/en/brands/a-and-w">A&W</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- todo -->
+    <div class="carousel">
+        <div class="carousel-track">
+            <div class="carousel-slide">
+                <img src="./assets/images/carousel-1.jpg" alt="Slide 1">
+                <div class="carousel-content">
+                    <h2>Join Share A Coke: Share Con and get your name on a Coca-Cola bottle!</h2>
+                    <p>Invite your friends, family and loved ones in the upcoming Share-a-Coke, Share-Con Activations!
+                        Personalize a bottle, capture the fun moments, and create new memories!</p>
+                    <button>Join Now</button>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./assets/images/carousel-2.jpg" alt="Slide 2">
+                <div class="carousel-content">
+                    <button>Discover More</button>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./assets/images/carousel-3.jpg" alt="Slide 3">
+            </div>
+            <div class="carousel-slide">
+                <img src="./assets/images/carousel-4.jpg" alt="Slide 4">
+                <div class="carousel-content">
+                    <h2>Our bottles can have many lives</h2>
+                    <button>Discover More</button>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="./assets/images/carousel-5.jpg" alt="Slide 5">
+                <div class="carousel-content">
+                    <h2>Passion for great-tasting beverages</h2>
+                    <p>You are at the center of everything that we do in our business. We are resolute to continuously
+                        provide refreshing drinks that responds to every need and preference for every occasion.</p>
+                    <button>Explore</button>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+        <div class="carousel-dots"></div>
+    </div>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <div class="impact-wrapper">
+            <div class="impact-image-box left-curve">
+                <img src="https://www.coca-cola.com/content/dam/onexp/ph/en/homepage/ph_cocacola_header02_desktop_1440x810_v1.jpg/width3840.jpg"
+                    alt="Environmental Cleanup">
+            </div>
+            <div class="impact-text-box">
+                <h2>Commitment to a World Without Waste</h2>
+                <p>
+                    We are turning our vision to reality by taking steps in collecting, recycling the equivalent
+                    of every bottle or can we sell by 2030 and create a greater impact by bringing people together
+                    to support a healthy debris-free environment.
+                </p>
+                <button class="primary-btn" onclick="redirectTo()">Explore</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="impact-section">
+        <div class="impact-wrapper reversed">
+            <div class="impact-image-box right-curve">
+                <img src="https://www.coca-cola.com/content/dam/onexp/ph/en/homepage/ph_cocacola_header03_desktop_1440x810_v1.jpg/width3840.jpg"
+                    alt="Business Impact">
+            </div>
+            <div class="impact-text-box reversed-text-box">
+                <h2>Doing Business the Right Way</h2>
+                <p>
+                    We ensure that our impact extends well beyond our business. We are committed to remaining true
+                    to our purpose: to refresh the world and make a difference to build a more sustainable future.
+                </p>
+                <button class="primary-btn" onclick="redirectTo()">Explore</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="twin-section">
+        <div class="twin-wrapper">
+            <div class="twin-box">
+                <img src="https://www.coca-cola.com/content/dam/onexp/ph/en/homepage/ph_cocacola_header05_desktop_1440x810_v1.jpg/width3840.jpg"
+                    alt="Championing Responsibility" class="twin-img">
+                <div class="twin-content">
+                    <h2>Championing responsible and sustainable business in the Philippines</h2>
+                    <p>
+                        We work towards accelerating economic empowerment by enabling local communities and providing
+                        opportunities
+                        to take on global challenges that require broad collective action, such as fostering excellence
+                        in water
+                        stewardship, sugar reduction, and addressing global plastic waste crisis.
+                    </p>
+                    <a href="#" class="explore-link"><span>Explore</span><span class="arrow">&#10148;</span></a>
+                </div>
+            </div>
+
+            <div class="twin-box">
+                <img src="https://www.coca-cola.com/content/dam/onexp/ph/en/homepage/ph_cocacola_header06_desktop_1440x810_v1.jpg/width3840.jpg"
+                    alt="People First" class="twin-img">
+                <div class="twin-content">
+                    <h2>We believe in putting our PEOPLE FIRST</h2>
+                    <p>
+                        We strive to be a global employer of choice that attracts and retains high-performing talents
+                        with passion,
+                        skills, and mindset to refresh the world and make a difference. Ensuring to put our people
+                        first, we are
+                        committed to make success possible by investing in programs that foster diversity, equality, and
+                        inclusion.
+                    </p>
+                    <a href="#" class="explore-link"><span>Explore</span><span class="arrow">&#10148;</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands">
+        <div class="brands-section">
+            <h1>EXPLORE OUR BRANDS</h1>
+        </div>
+
+        <div class="brands-catalog-parent">
+            <section class="brands-catalog-container" id="brands-catalog-home">
+                <div class="brands-catalog-item">
+                    <div class="brand-logo">
+                        <img src="./assets/images/coca-cola red logo.png" alt="Coca-Cola Logo">
+                    </div>
+                </div>
+                <div class="brands-catalog-item">
+                    <div class="brand-logo">
+                        <img src="./assets/images/royal.png" alt="Coca-Cola Logo">
+                    </div>
+                </div>
+                <div class="brands-catalog-item">
+                    <div class="brand-logo">
+                        <img src="./assets/images/sprite.png" alt="Coca-Cola Logo">
+                    </div>
+                </div>
+                <div class="brands-catalog-item">
+                    <div class="brand-logo">
+                        <img src="./assets/images/wilkins.png" alt="Coca-Cola Logo">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="view-all-btn">
+            <button class="primary-btn" onclick="redirectTo('brands.html')">View All</button>
+        </div>
+
+        <div id="brand-overlay" class="brand-overlay hidden">
+            <div class="brand-overlay-content">
+                <span id="close-overlay">&times;</span>
+                <h2 id="brand-title">Brand Title</h2>
+                <p id="brand-description">This is a short description about the selected brand.</p>
+                <button class="primary-btn dropdown-btn">Explore More</button>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="footer-top">
+                <img src="./assets/images/colalogo.png" alt="Footer Logo">
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="footer-links">
+                <div class="links-column">
+                    <h4>ABOUT US</h4>
+                    <a href="#">Our Company</a>
+                    <a href="#">Media Center</a>
+                    <a href="#">History</a>
+                    <a href="#">Careers</a>
+                </div>
+                <div class="links-column">
+                    <h4>NEED HELP?</h4>
+                    <a href="#">FAQ</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Sitemap</a>
+                </div>
+                <div class="links-column">
+                    <h4>LEGAL</h4>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Terms and Conditions</a>
+                    <a href="#">Cookie Settings</a>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="social-media">
+                <a href="#"><img src="./assets/images/xlogo.png" alt="X Icon"></a>
+                <a href="#"><img src="./assets/images/iglogo.png" alt="Instagram Icon"></a>
+                <a href="#"><img src="./assets/images/ytlogo.png" alt="YouTube Icon"></a>
+                <a href="#"><img src="./assets/images/fblogo.png" alt="Facebook Icon"></a>
+                <a href="#"><img src="./assets/images/lilogo.png" alt="LinkedIn Icon"></a>
+            </div>
+            <p>© 2025 The Coca-Cola Company. All rights reserved.</p>
+            <small class="disclaimer">No copyright infringement intended. This project is for educational purposes
+                only.</small>
+        </footer>
+
+        <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

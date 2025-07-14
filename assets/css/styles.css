@@ -1,0 +1,816 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+/* ======================================= UNIVERSAL ======================================= */
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.loader-logo {
+    position: relative;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.loader-logo img {
+    width: 150px;
+    animation: pulse 2s infinite;
+}
+
+/* Bubbles */
+.bubbles {
+    margin-top: 20px;
+}
+
+.bubbles span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #e41e26;
+    border-radius: 50%;
+    margin: 0 4px;
+    animation: bounce 0.6s infinite alternate;
+}
+
+.bubbles span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.bubbles span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Navigation Bar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+a.active_tab {
+    text-decoration: underline;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Footer Section*/
+
+footer {
+    background-color: #000;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: center;
+    transform: translateX(20px);
+    margin-bottom: 30px;
+}
+
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.links-column {
+    min-width: 150px;
+    text-align: center;
+}
+
+.links-column h4 {
+    margin-bottom: 10px;
+}
+
+.links-column a {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.social-media a img {
+    height: 20px;
+}
+
+.footer .disclaimer {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+/* Buttons */
+.primary-btn {
+    align-self: flex-start;
+    padding: 12px 120px;
+    min-width: 220px;
+    border: 2px solid black;
+    border-radius: 25px;
+    font-weight: bold;
+    background-color: white;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    text-align: center;
+}
+
+.primary-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.dropdown-btn {
+    margin: 2rem;
+}
+
+/* ======================================= HOMEPAGE ======================================= */
+/* Carousel Section */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 40px auto;
+    border-radius: 15px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 40px;
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    color: white;
+    max-width: 500px;
+}
+
+.carousel-content h2 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.carousel-content p {
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.carousel-content button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+.carousel-content button:hover {
+    background-color: black;
+    color: white;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: black;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.6);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.carousel-btn.prev {
+    left: 15px;
+}
+
+.carousel-btn.next {
+    right: 15px;
+}
+
+/* Impact Section */
+.impact-section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.impact-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.impact-image-box {
+    width: 620px;
+    height: 370px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.left-curve {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.right-curve {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.impact-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.impact-text-box {
+    width: 550px;
+    height: 540px;
+    background-color: white;
+    padding: 50px 50px 40px 50px;
+    border-radius: 15px;
+    margin-left: -30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    position: relative;
+}
+
+.reversed-text-box {
+    margin-left: 0;
+    margin-right: -30px;
+}
+
+.impact-text-box h2 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.impact-text-box p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 190px;
+}
+
+.reversed {
+    flex-direction: row-reverse;
+}
+
+.twin-section {
+    padding: 60px 40px;
+    display: flex;
+    justify-content: center;
+    background-color: #f3f3f3;
+}
+
+.twin-wrapper {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.twin-box {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    width: 550px;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.twin-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.twin-content {
+    padding: 30px 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.twin-content h2 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.twin-content p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.explore-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.explore-link:hover {
+    color: #e60000;
+}
+
+/* Brands */
+.view-all-btn {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+
+/* ======================================= BRAND ======================================= */
+.brands-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.brands-section h1,
+.brands-section p {
+    text-align: center;
+}
+
+.brands-catalog-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+.brands-catalog-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.brands-catalog-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    max-width: 300px;
+}
+
+.brand-logo img {
+    object-fit: contain;
+    width: 10rem;
+    height: 10rem;
+}
+
+.brands-catalog-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.brand-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+
+}
+
+.brand-overlay-content {
+    background-color: #fff;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.brand-overlay-content h2 {
+    margin-bottom: 1rem;
+}
+
+.brand-overlay-content span {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.brand-overlay-button {
+    background-color: white;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin-top: 1rem;
+    padding: 12px 120px;
+    min-width: 220px;
+    border: 2px solid black;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3;
+}
+
+.brand-overlay-button a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.brand-overlay-button:hover,
+.brand-overlay-button:hover a {
+    background-color: black;
+    color: white;
+}
+
+/* ======================================= ABOUT ======================================= */
+
+.about-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.about-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #e60000;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    line-height: 1.8;
+    font-size: 16px;
+    color: #333;
+}
+
+.youtube-video {
+    max-width: 960px;
+    margin: 0 auto 60px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.full-width-image {
+    width: 100%;
+    margin-top: 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image {
+    max-width: 70%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.purpose-section {
+    margin-top: 60px;
+}
+
+.container {
+    position: relative;
+    /* Make the container a positioning context */
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-box {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    max-width: 500px;
+    position: absolute;
+    /* Overlap the image */
+    z-index: 2;
+    /* Ensure it appears above the image */
+}
+
+.text-box h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e60000;
+    margin-bottom: 20px;
+}
+
+.text-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.primary-btn {
+    padding: 12px 30px;
+    border: 2px solid black;
+    border-radius: 25px;
+    font-weight: bold;
+    background-color: white;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    text-align: center;
+}
+
+.primary-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Related Content Section */
+.related-content {
+    padding: 40px 0;
+    text-align: center;
+    /* Center the section title */
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.triplet-wrapper {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+.triplet-box {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    width: calc(33.333% - 40px);
+    /* Adjust for spacing */
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.triplet-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.triplet-content {
+    padding: 30px 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.triplet-content h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #e60000;
+}
+
+.triplet-content p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.explore-link {
+    color: black;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.link-text {
+    text-decoration: underline;
+}
+
+.arrow {
+    text-decoration: none;
+}
+
+.explore-link:hover {
+    color: #e60000;
+}
+
+.triplet-box img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    /* width : height */
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Purpose Section - Unified Image Size */
+.purpose-section .image-box img {
+    width: 100%;
+    height: 500px;
+    /* Set a fixed height for all purpose section images */
+    object-fit: cover;
+    /* Ensures the image fills the container without stretching */
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Hover effect for visual enhancement */
+.purpose-section .image-box img:hover {
+    transform: scale(1.05);
+}

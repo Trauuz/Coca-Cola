@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coca-Cola | Brands</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/mediaquerry.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="loader-logo">
+            <img src="./assets/images/coca-cola red logo.png" alt="Loading Coca-Cola" />
+            <div class="bubbles">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./assets/images/colalogo.png" alt="Coca-Cola Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="brands.html" class="dropbtn active_tab">Brands</a>
+                    <div class="dropdown-content">
+                        <a href="https://www.coca-cola.com/ph/en/brands/coca-cola">Coca-Cola</a>
+                        <a href="https://www.coca-cola.com/ph/en/brands/royal">Royal</a>
+                        <a href="https://www.coca-cola.com/ph/en/brands/sprite">Sprite</a>
+                        <a href="https://www.coca-cola.com/ph/en/brands/wilkins">Wilkins</a>
+                        <a href="https://www.coca-cola.com/ph/en/brands/lemon-dou">Lemon-Dou</a>
+                        <a href="https://www.coca-cola.com/ph/en/brands/minute-maid">Minute Maid</a>
+                        <a href="https://www.coca-cola.com/ph/en/brands/nutriboost">Nutriboost</a>
+                        <a href="https://www.coca-cola.com/ph/en/brands/a-and-w">A&W</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Brand Catalog -->
+    <div class="brands-section">
+        <h1>EXPLORE OUR BRANDS</h1>
+        <p>Meet the brands you know and love.</p>
+    </div>
+
+    <div class="brands-catalog-parent">
+        <section class="brands-catalog-container">
+            <div class="brands-catalog-item">
+                <div class="brand-logo">
+                    <img src="./assets/images/coca-cola red logo.png" alt="Coca-Cola Logo">
+                </div>
+            </div>
+            <div class="brands-catalog-item">
+                <div class="brand-logo">
+                    <img src="./assets/images/royal.png" alt="Coca-Cola Logo">
+                </div>
+            </div>
+            <div class="brands-catalog-item">
+                <div class="brand-logo">
+                    <img src="./assets/images/sprite.png" alt="Coca-Cola Logo">
+                </div>
+            </div>
+            <div class="brands-catalog-item">
+                <div class="brand-logo">
+                    <img src="./assets/images/wilkins.png" alt="Coca-Cola Logo">
+                </div>
+            </div>
+            <div class="brands-catalog-item">
+                <div class="brand-logo">
+                    <img src="./assets/images/lemon dou.png" alt="Coca-Cola Logo">
+                </div>
+            </div>
+            <div class="brands-catalog-item">
+                <div class="brand-logo">
+                    <img src="./assets/images/minute maid.png" alt="Coca-Cola Logo">
+                </div>
+            </div>
+            <div class="brands-catalog-item">
+                <div class="brand-logo">
+                    <img src="./assets/images/a&w.png" alt="Coca-Cola Logo">
+                </div>
+            </div>
+            <div class="brands-catalog-item">
+                <div class="brand-logo">
+                    <img src="./assets/images/nutriboost.png" alt="Coca-Cola Logo">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="brand-overlay" class="brand-overlay hidden">
+        <div class="brand-overlay-content">
+            <span id="close-overlay">&times;</span>
+            <h2 id="brand-title">Brand Title</h2>
+            <p id="brand-description">This is a short description about the selected brand.</p>
+            <button class="primary-btn dropdown-btn">Explore More</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <img src="./assets/images/colalogo.png" alt="Footer Logo">
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="footer-links">
+            <div class="links-column">
+                <h4>ABOUT US</h4>
+                <a href="#">Our Company</a>
+                <a href="#">Media Center</a>
+                <a href="#">History</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="links-column">
+                <h4>NEED HELP?</h4>
+                <a href="#">FAQ</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Sitemap</a>
+            </div>
+            <div class="links-column">
+                <h4>LEGAL</h4>
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Cookie Settings</a>
+            </div>
+        </div>
+
+        <hr class="footer-divider">
+
+        <div class="social-media">
+            <a href="#"><img src="./assets/images/xlogo.png" alt="X Icon"></a>
+            <a href="#"><img src="./assets/images/iglogo.png" alt="Instagram Icon"></a>
+            <a href="#"><img src="./assets/images/ytlogo.png" alt="YouTube Icon"></a>
+            <a href="#"><img src="./assets/images/fblogo.png" alt="Facebook Icon"></a>
+            <a href="#"><img src="./assets/images/lilogo.png" alt="LinkedIn Icon"></a>
+        </div>
+        <p>© 2025 The Coca-Cola Company. All rights reserved.</p>
+        <small class="disclaimer">No copyright infringement intended. This project is for educational purposes
+            only.</small>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

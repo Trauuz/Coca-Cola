@@ -12,6 +12,38 @@ body {
     overflow-x: hidden;
 }
 
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 /* ======================================= UNIVERSAL ======================================= */
 #preloader {
     position: fixed;
@@ -815,4 +847,32 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Default layout: text on left, image on right */
+.text-box {
+    flex: 1 1 50%;
+    padding: 20px;
+}
+
+.image-box {
+    flex: 1 1 50%;
+    padding: 20px;
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* For right-aligned sections: swap order using flex-direction */
+.purpose-section.right .container {
+    flex-direction: row-reverse;
 }
